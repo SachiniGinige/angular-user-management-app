@@ -1,0 +1,16 @@
+.btn{
+    margin: 0% 6%;
+    background-color:  rgb(24, 56, 43);
+    /* color: white; */
+}
+#table-icon-edit{
+    /* color: rgb(77, 146, 117); */
+    color: rgb(24, 56, 43);
+}
+#table-icon-del{
+    color: rgb(83, 35, 47);
+}
+.table{
+    color: rgb(24, 56, 43);
+    background-color: rgba(255, 255, 255, 0.858);
+}
