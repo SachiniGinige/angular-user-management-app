@@ -40,4 +40,16 @@ export class UsersListComponent {
     this.router.navigate(['./update', id]);
   }
 
+  DeleteUser(id: number) {
+    const confirmation:boolean = window.confirm("Are you sure you want to delete User No. "+ id + "?");
+
+    if(confirmation){
+      this.service.DeleteById(id).subscribe(res =>{
+        // this.userList.data=this.userList.data.filter((user:any)=>{user.id!==id});
+        // console.log(this.userList.data.filter((user:any)=>{user.id!==id}));
+      })
+    }
+
+  }
+
 }
