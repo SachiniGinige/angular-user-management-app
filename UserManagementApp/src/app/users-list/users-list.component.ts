@@ -4,6 +4,7 @@ import { UserService } from '../services/user.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users-list',
@@ -12,7 +13,7 @@ import { MatSort } from '@angular/material/sort';
 })
 export class UsersListComponent {
 
-  constructor(private service: UserService) {
+  constructor(private service: UserService, private router: Router) {
     this.LoadUsers();
   }
   userList:any;
@@ -20,7 +21,7 @@ export class UsersListComponent {
   @ViewChild(MatPaginator) paginator !: MatPaginator;
   @ViewChild(MatSort) sort !: MatSort;
   
-  async LoadUsers(){
+  LoadUsers(){
     this.service.GetAll().subscribe(res => {
       if (res) {
         this.userList = res;
@@ -35,8 +36,8 @@ export class UsersListComponent {
   , 'actions'
   ];
 
-  UpdateUser(id:number){
-
+  NavigateToUpdate(id: number) {
+    this.router.navigate(['./update', id]);
   }
 
 }

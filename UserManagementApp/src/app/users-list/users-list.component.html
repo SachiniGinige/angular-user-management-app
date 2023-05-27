@@ -38,7 +38,7 @@
         <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef> Actions</th>
             <td mat-cell *matCellDef="let user">  
-                <a (click)="UpdateUser(user.id)" mat-raised-button color="primary">Update</a>
+                <a (click)="NavigateToUpdate(user.id)" mat-raised-button color="primary">Update</a>
             </td>
         </ng-container>
     

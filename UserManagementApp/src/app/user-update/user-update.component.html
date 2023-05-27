@@ -1,0 +1,36 @@
+<div >
+    <mat-card [formGroup]="updateForm" class="form-card">
+        <mat-card-header >
+            <mat-card-title> Update User</mat-card-title>
+        </mat-card-header><br>
+
+        <mat-card-content>
+            <form [formGroup]="updateForm" class="form" >
+                <mat-form-field class=" formfield-full-width">
+                    <mat-label for="fname">First Name: </mat-label>
+                    <input matInput type="text" id="fname" placeholder="Ex. John" formControlName="fname">
+                </mat-form-field>   
+                
+                <mat-form-field class=" formfield-full-width">
+                    <mat-label for="lname">Last Name: </mat-label>
+                    <input matInput type="text" id="lname" placeholder="Ex. Smith" formControlName="lname">
+                </mat-form-field>
+                
+                <mat-form-field class=" formfield-full-width">
+                    <mat-label for="email">Email Address: </mat-label>
+                    <input matInput type="text" id="email" placeholder="Ex. johnsmith@gmail.com" formControlName="email">
+                </mat-form-field>
+                
+                <!-- <mat-form-field class=" formfield-full-width">
+                    <mat-label for="avatar">Avatar: </mat-label>
+                    <img width="80px" src="avatar" alt=""> 
+                </mat-form-field> -->
+                
+                <br>
+                <a routerLink="../../" mat-raised-button color="basic" class="btn">Back</a>
+                <button mat-raised-button color="primary" (click)="UpdateUser()" class="btn">Update</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+
