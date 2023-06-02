@@ -26,6 +26,7 @@ export class UserRegisterComponent {
       // Password Pattern => At least 8 characters long
       // Validators.pattern('^.{8,}$'),
     ]],
+    job:[''],
   });
 
   RegisterUser(){
