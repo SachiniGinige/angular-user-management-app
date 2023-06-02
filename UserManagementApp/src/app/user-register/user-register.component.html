@@ -5,7 +5,7 @@
         </mat-card-header><br>
 
         <mat-card-content>
-            <form [formGroup]="regForm" class="form" (click)="RegisterUser()">
+            <form [formGroup]="regForm" class="form" (ngSubmit)="RegisterUser()">
                 <mat-form-field class=" formfield-full-width">
                     <mat-label for="fname">First Name: </mat-label>
                     <input matInput type="text" id="fname" placeholder="Ex. John" formControlName="fname">
@@ -23,7 +23,7 @@
                 
                 <mat-form-field class=" formfield-full-width">
                     <mat-label for="password">Password: </mat-label>
-                    <input matInput type="password" id="password" placeholder="Must contain uppercase, lowercase and digits" formControlName="password">
+                    <input matInput type="password" id="password" placeholder="Min. 8 characters. Must contain uppercase, lowercase and digits" formControlName="password">
                 </mat-form-field>
                 
                 <mat-form-field class=" formfield-full-width">
